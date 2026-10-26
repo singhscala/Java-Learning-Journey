@@ -10,7 +10,6 @@ public class LongestSubstring {
         System.out.println(longestSubstring(str));
     }
 
-
     public static int longestSubstring(String str) {
         Map<Character, Integer> map = new HashMap<>();
 

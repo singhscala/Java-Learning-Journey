@@ -3,24 +3,26 @@ package search;
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6};
-        int target = 7;
-        binarySearch(arr, target);
+        int[] arr = {1, 2, 3, 5, 7, 8};
+        int value = 3;
+        System.out.println(binary(arr, value));
     }
 
-    public static void binarySearch(int[] arr, int target){
-        int pos = 0;
+    public static boolean binary(int[] arr, int value){
         boolean flag = false;
-        for(int i=0; i<arr.length; i++){
-            if(arr[i]==target){
-                pos = i;
+        int left=0, right=arr.length-1, mid;
+        while(left<=right){
+            mid = (right+left)/2;
+            if(arr[mid] == value){
                 flag = true;
+                break;
+            }else if(arr[mid]>value){
+                right = mid-1;
+            }else{
+                left = mid+1;
             }
         }
 
-        if(flag){
-            System.out.println(target+" found at: "+pos);
-        }else
-            System.out.println("Not found");
+        return flag;
     }
 }

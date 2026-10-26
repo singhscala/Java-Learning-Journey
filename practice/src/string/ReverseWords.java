@@ -4,14 +4,20 @@ public class ReverseWords {
 
     public static void main(String[] args) {
         String words = "Java is fun";
-        reverseWords(words);
+        System.out.println(reverseWord(words));
     }
 
-    public static void reverseWords(String words){
-        String[] wr = words.split(" ");
+    public static String reverseWord(String str) {
+        String[] s = str.split(" ");
+        StringBuilder st = new StringBuilder();
 
-        for(int i=wr.length-1; i>=0; i--){
-            System.out.print(wr[i]+" ");
+        for (int i = s.length - 1; i >= 0; i--) {
+            st.append(s[i]);
+            if (i > 0) {
+                st.append(" ");
+            }
         }
+
+        return st.toString();
     }
 }

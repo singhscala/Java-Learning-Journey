@@ -6,7 +6,7 @@ import java.util.Map;
 public class Majority {
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 2, 3};
+        int[] arr = {1, 2, 2, 2, 3};
         System.out.println(majorityElements(arr));
     }
 
