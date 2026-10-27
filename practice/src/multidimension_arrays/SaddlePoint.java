@@ -1,7 +1,6 @@
 package multidimension_arrays;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class SaddlePoint {
 
